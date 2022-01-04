@@ -1,7 +1,5 @@
 # colab_theme
 
-![Github Actions Status](https://github.com/ajoudaki/colab-theme/workflows/Build/badge.svg)
-
 Google Colab inspired theme for Jupyter Lab
 
 ![image info](https://github.com/ajoudaki/jupyterlab-colab-theme/blob/main/colab_theme.png)
