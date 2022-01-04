@@ -29,13 +29,13 @@ all of MD as it is not optimized for dense, information rich UIs.
   --colab-logo-dark: #e8710a;
   --ansi-red: rgb(255,122,136);
   --colab-icon-color: #f5f5f5;
-  --colab-primary-text-color: #d5d5d5;
   --colab-toolbar-button-color: #eeeeee;
+  --colab-primary-text-color: #d5d5d5;
   --colab-secondary-text-color: #f7f7f7;
   --colab-code-cell-background: #1e1e1e;
   --colab-primary-surface-color: #383838;
-  --colab-highlighted-surface-color: #525252;
   --colab-secondary-surface-color: #454545;
+  --colab-highlighted-surface-color: #525252;
   --colab-primary-surface-color-active: #4a4a4a;
   --colab-code-font-family: monospace;
   --colab-chrome-font-family: 'Roboto', 'Noto', sans-serif;
@@ -296,7 +296,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   /* Rendermime styles */
   --jp-rendermime-error-background: var(--colab-primary-surface-color);
   --jp-rendermime-table-row-background: var(--colab-primary-surface-color);
-  --jp-rendermime-table-row-hover-background: var(--colab-primary-surface-color);
+  --jp-rendermime-table-row-hover-background: var(--colab-highlighted-surface-color);
 
   /* Dialog specific styles */
   --jp-dialog-background: rgba(0, 0, 0, 0.25);
@@ -359,6 +359,45 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Sidebar-related styles */
   --jp-sidebar-min-width: 180px;
+}
+
+
+/*----------------------------------------------------------------------------
+
+Style table dataframe
+----------------------------------------------------------------------------*/
+
+
+table.dataframe tr, table.dataframe th, table.dataframe td {
+  border: none;
+  padding: 0.5em;
+  white-space: normal;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table.dataframe {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+}
+
+table {
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+table.dataframe tbody tr:nth-child(odd) {
+  background: var(--colab-secondary-surface-color);
+}
+table.dataframe tbody tr:nth-child(odd):hover {
+  background: var(--colab-highlighted-surface-color);
 }
 
 
