@@ -65,6 +65,7 @@ html {
 }
 
 :root {
+  --colab-chrome-font-size: 14px;
   --colab-code-font-family: monospace;
   --google-orange-600: #e8710a;
   --google-yellow-600: #f9ab00;
@@ -335,12 +336,12 @@ html {
   --jp-cell-collapser-color: var(--jp-shadow-umbra-color);
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
-  --jp-cell-editor-background: var(--colab-code-cell-background);
+  --jp-cell-editor-background: var(--code-cell-background);
   --jp-cell-editor-border-color: var(--colab-border-color);
   --jp-cell-editor-box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 40%);
   --jp-cell-editor-active-background: var(--code-cell-background);
   --jp-cell-editor-active-border-color: var(--colab-border-color);
-  --jp-cell-prompt-width: 35px;
+  --jp-cell-prompt-width: 40px;
   --jp-cell-prompt-font-family:  var(--jp-code-font-family-default);
   --jp-cell-prompt-letter-spacing: 0px;
   --jp-cell-prompt-opacity: 1;
@@ -440,6 +441,39 @@ html {
 
 /*----------------------------------------------------------------------------
 
+Style table of contents
+----------------------------------------------------------------------------*/
+
+.jp-TableOfContents .jp-stack-panel-header {
+  flex: 1 1;
+  font-family: var(--colab-google-sans-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px 8px 4px 8px;
+}
+
+
+#table-of-contents .jp-TableOfContents, #table-of-contents .jp-TableOfContents-content {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  overflow:  auto;
+  display: block;
+
+}
+
+
+.jp-tocItem {
+  border-left: 3px solid transparent;
+  color: var(--colab-secondary-text-color);
+  padding: 0 6px 0 10px;
+  font-family: var(--colab-chrome-font-family);
+  font-size: var(--colab-chrome-font-size);
+}
+
+
+/*----------------------------------------------------------------------------
+
 Style table dataframe
 ----------------------------------------------------------------------------*/
 
@@ -531,6 +565,7 @@ Style borderss: remove most borders borders and
 /* don't stretch tabs */
 .lm-TabBar-tab,.lm-TabBar-tab {
   flex: none !important;
+  max-width: 200px
 }
 /* don't display top blue bar */
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
@@ -593,7 +628,7 @@ Style cells and code editor
 
 .CodeMirror.cm-s-jupyter {
   margin: var(--jp-code-margin);
-  background: var(--colab-code-cell-background);
+  background: var(--code-cell-background);
   color: var(--jp-content-font-color1);
 }
 
@@ -615,7 +650,7 @@ Style cells and code editor
   box-shadow: var( --jp-cell-editor-box-shadow);
 }
 .jp-Cell .jp-InputPrompt {
-  background: var(--colab-code-cell-background);
+  background: var(--code-cell-background);
 }
 
 
@@ -643,7 +678,7 @@ Style cells and code editor
 
 /* style line numbers */
 .cm-s-jupyter .CodeMirror-linenumber,.cm-s-jupyter .CodeMirror-gutter {
-  background: var(--colab-code-cell-background);
+  background: none var(--code-cell-background);
 }
 
 .jp-RenderedMarkdown {

@@ -362,6 +362,27 @@ all of MD as it is not optimized for dense, information rich UIs.
 }
 
 
+
+#table-of-contents .jp-TableOfContents, #table-of-contents .jp-TableOfContents-content {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  overflow:  auto;
+  display: block;
+
+}
+
+
+.jp-tocItem {
+  border-left: 3px solid transparent;
+  color: var(--colab-secondary-text-color);
+  padding: 0 6px 0 10px;
+  font-family: var(--colab-chrome-font-family);
+  font-size: var(--colab-chrome-font-size);
+}
+
+
+
 /*----------------------------------------------------------------------------
 
 Style table dataframe
