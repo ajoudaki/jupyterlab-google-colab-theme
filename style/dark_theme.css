@@ -32,7 +32,7 @@ all of MD as it is not optimized for dense, information rich UIs.
     --colab-toolbar-button-color: #eeeeee;
     --colab-primary-text-color: #d5d5d5;
     --colab-secondary-text-color: #f7f7f7;
-    --colab-code-cell-background: #1e1e1e;
+    --code-cell-background: #1e1e1e;
     --colab-primary-surface-color: #383838;
     --colab-secondary-surface-color: #454545;
     --colab-highlighted-surface-color: #525252;
@@ -259,10 +259,10 @@ all of MD as it is not optimized for dense, information rich UIs.
     --jp-cell-collapser-color: var(--jp-shadow-umbra-color);
     --jp-cell-collapser-min-height: 20px;
     --jp-cell-collapser-not-active-hover-opacity: 0.6;
-    --jp-cell-editor-background: var(--colab-code-cell-background);
+    --jp-cell-editor-background: var(--code-cell-background);
     --jp-cell-editor-border-color: var(--colab-border-color);
     --jp-cell-editor-box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 40%);
-    --jp-cell-editor-active-background: var(--colab-code-cell-background);
+    --jp-cell-editor-active-background: var(--code-cell-background);
     --jp-cell-editor-active-border-color: var(--colab-border-color);
     --jp-cell-prompt-width: 35px;
     --jp-cell-prompt-font-family:  var(--jp-code-font-family-default);
