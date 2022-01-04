@@ -366,6 +366,43 @@ all of MD as it is not optimized for dense, information rich UIs.
 }
 
 
+.lm-DockPanel-tabBar .lm-TabBar-tab {
+  border: 0;
+}
+
+.lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
+  display: none;
+}
+
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+  background: none;
+}
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current {
+  transition: border 1s;
+  border-bottom: 2px solid #1a73e8;
+}
+
+
+.p-DockPanel-handle:after,
+.lm-DockPanel-handle:after,
+.p-SplitPanel-handle:after,
+.lm-SplitPanel-handle:after {
+  background: var(--colab-primary-surface-color);
+  min-height: 4px !important;
+  min-width: 4px !important;
+  border-bottom: 1px solid var(--colab-border-color);
+  border-right: 1px solid var(--colab-border-color);
+}
+
+.p-DockPanel-handle:hover:after,
+.lm-DockPanel-handle:hover:after,
+.p-SplitPanel-handle:hover:after,
+.lm-SplitPanel-handle:hover:after {
+  background: var(--colab-highlighted-surface-color);
+}
+
+
+
 .jp-KeySelector select.jp-mod-styled ,
 input.bp3-input,
 .jp-DocumentSearch-input-wrapper,.jp-DocumentSearch-replace-entry,
@@ -377,23 +414,6 @@ select.jp-mod-styled
   border-bottom: 2px solid var(--colab-primary-text-color);
 }
 
-
-.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
-  display: none;
-}
-
-.lm-DockPanel-tabBar .lm-TabBar-tab {
-  border: 0;
-}
-
-.lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
-  display: none;
-}
-
-.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current {
-  transition: border 1s;
-  border-bottom: 2px solid #1a73e8;
-}
 
 
 .CodeMirror-matchingbracket {
@@ -411,11 +431,6 @@ select.jp-mod-styled
   margin: var(--jp-code-margin);
   background: var(--colab-code-cell-background);
   color: var(--jp-content-font-color1);
-}
-
-
-.lm-DockPanel-widget,.jp-Toolbar {
-  /* border: none; */
 }
 
 .jp-OutputArea-output pre {
@@ -439,6 +454,18 @@ select.jp-mod-styled
 .jp-Cell.jp-mod-active .jp-InputPrompt {
   transition: background 0.2s;
   background: var(--colab-highlighted-surface-color);
+}
+
+.jp-CodeConsole {
+  border-left: 1px solid var(--colab-border-color);
+}
+
+.jp-CodeConsole-content .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
+  display: none;
+}
+
+.jp-CodeConsole-content .jp-InputArea-editor.jp-InputArea-editor {
+  background: var(--jp-cell-editor-background);
 }
 
 /* .jp-Collapser-child {
@@ -490,66 +517,6 @@ li[aria-selected=true] > div.f1dvozo {
 .jp-showHiddenCellsButton:hover {
   background-color: #555 !important;
 }
-.h-line {
-  position: relative;
-  height: 8px;
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.h-line>#cov {
-  position: absolute;
-  /*   background: blue; */
-  width:250px;
-  height:50px;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.h-line>#line {
-  width:80%;
-  height:0px;
-  top: 3px;
-  border-top: 1px solid #777;
-  opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.96, 0.04, 1, 1);
-}
-
-.h-line:hover>#line {
-  opacity: 1;
-
-}
-
-
-.h-line button {
-  height: 24px;
-  position: flex;
-  margin: 10px;
-  border: .3px solid black;
-  /*   box-shadow: none;0 0 1px 0 black; */
-  border-radius: 0px;
-  background: var(--colab-secondary-surface-color);
-  color: var(--colab-primary-text-color);
-  opacity: 0;
-  display: inline;
-
-  transition: opacity 0.3s cubic-bezier(0.89, 0.01, 1, 1);
-}
-
-.h-line button:hover {
-  background: var(--md-grey-700);
-}
-
-.h-line:hover button {
-  opacity: 1;
-}
-
 
 /*-----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
