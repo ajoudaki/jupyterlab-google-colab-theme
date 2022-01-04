@@ -1,0 +1,60 @@
+.h-line {
+    position: relative;
+    height: 8px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.h-line>#cov {
+    position: absolute;
+    /*   background: blue; */
+    width:250px;
+    height:50px;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-line>#line {
+    width:80%;
+    height:0px;
+    top: 3px;
+    border-top: 1px solid #777;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.96, 0.04, 1, 1);
+}
+
+.h-line:hover>#line {
+    opacity: 1;
+
+}
+
+
+.h-line button {
+    height: 24px;
+    position: flex;
+    margin: 10px;
+    border: .3px solid black;
+    /*   box-shadow: none;0 0 1px 0 black; */
+    border-radius: 0px;
+    background: var(--colab-secondary-surface-color);
+    color: var(--colab-primary-text-color);
+    opacity: 0;
+    display: inline;
+
+    transition: opacity 0.3s cubic-bezier(0.89, 0.01, 1, 1);
+}
+
+.h-line button:hover {
+    background: var(--md-grey-700);
+}
+
+.h-line:hover button {
+    opacity: 1;
+}
+
