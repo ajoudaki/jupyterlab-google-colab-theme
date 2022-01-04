@@ -361,6 +361,49 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-sidebar-min-width: 180px;
 }
 
+
+/*----------------------------------------------------------------------------
+
+Style icons: make most icons white, except for active logos
+----------------------------------------------------------------------------*/
+
+/* make most icons white and fix their size */
+.jp-icon3[fill],
+.jp-icon-warn0[fill],
+.jp-icon-warn1[fill],
+.jp-icon-brand0[fill],
+.jp-icon-contrast0[fill] {
+  fill: var(--colab-icon-color);
+}
+.f1dvozo svg {
+  width: 18px;
+  padding: 0 0 0 3px;
+}
+
+/* designate the active side menu */
+.jp-SideBar li[aria-selected=true] .jp-icon3[fill] {
+  fill: var(--colab-logo-dark);
+}
+li[aria-selected=true] > div.f1dvozo {
+  border-left: 3px solid var(--colab-logo-dark);
+}
+
+
+/* add margin before close X button */
+.lm-DockPanel-tabBar svg, .lm-TabPanel-tabBar svg {
+  margin-left: 8px ;
+}
+
+/* remove icons from tabs */
+.lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
+  display: none;
+}
+
+
+/*----------------------------------------------------------------------------
+
+Style borderss: remove most borders borders and
+----------------------------------------------------------------------------*/
 .jp-SideBar .p-Widget, .lm-Widget {
   border: none;
 }
@@ -370,19 +413,9 @@ all of MD as it is not optimized for dense, information rich UIs.
   border: 0;
 }
 
-
 /* don't stretch tabs */
 .lm-TabBar-tab,.lm-TabBar-tab {
   flex: none !important;
-}
-/* add margin before close X button */
-.lm-DockPanel-tabBar svg, .lm-TabPanel-tabBar svg {
-  margin-left: 8px ;
-}
-
-/* remove icons from tabs */
-.lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
-  display: none;
 }
 /* don't display top blue bar */
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
@@ -414,7 +447,10 @@ all of MD as it is not optimized for dense, information rich UIs.
   background: var(--colab-highlighted-surface-color);
 }
 
+/*----------------------------------------------------------------------------
 
+Style inputs
+----------------------------------------------------------------------------*/
 
 .jp-KeySelector select.jp-mod-styled ,
 input.bp3-input,
@@ -428,17 +464,17 @@ select.jp-mod-styled
 }
 
 
+/*----------------------------------------------------------------------------
+
+Style cells and code editor
+----------------------------------------------------------------------------*/
+
 
 .CodeMirror-matchingbracket {
   border: 1px solid #999;
   color: var(--colab-primary-text-color) !important;
 }
 
-.jp-Cell {
-  margin: var(--jp-cell-margin);
-}
-
-/* specific cell styles */
 
 .CodeMirror.cm-s-jupyter {
   margin: var(--jp-code-margin);
@@ -449,8 +485,12 @@ select.jp-mod-styled
 .jp-OutputArea-output pre {
   padding: 10px;
   white-space: pre;
-
 }
+
+.jp-Cell {
+  margin: var(--jp-cell-margin);
+}
+
 
 .jp-Cell-outputWrapper {
   margin: 0 !important;
@@ -476,44 +516,19 @@ select.jp-mod-styled
 .jp-CodeConsole-content .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
   display: none;
 }
-
 .jp-CodeConsole-content .jp-InputArea-editor.jp-InputArea-editor {
   background: var(--jp-cell-editor-background);
 }
 
-/* .jp-Collapser-child {
-  background: var(--md-grey-900);
-}
-
-.jp-Collapser-child:hover {
-  background: var(--colab-logo-dark);
-} */
-
+/* hide collapser */
 .jp-Collapser {
   display: none !important;
 }
 
 
+/* style line numbers */
 .cm-s-jupyter .CodeMirror-linenumber,.cm-s-jupyter .CodeMirror-gutter {
   background: var(--colab-code-cell-background);
-}
-/* override  icons colors and size  */
-
-.jp-icon3[fill] {
-  fill: var(--colab-icon-color);
-}
-
-.jp-SideBar li[aria-selected=true] .jp-icon3[fill] {
-  fill: var(--colab-logo-dark);
-}
-
-li[aria-selected=true] > div.f1dvozo {
-  border-left: 3px solid var(--colab-logo-dark);
-}
-
-.f1dvozo svg {
-  width: 18px;
-  padding: 0 0 0 3px;
 }
 
 .jp-RenderedMarkdown {
@@ -524,11 +539,11 @@ li[aria-selected=true] > div.f1dvozo {
   background-color: var(--colab-secondary-surface-color) !important;
   width: 100%;
   text-align: left !important;
-  border: 1px dashed #1a1a1a;
+  border: 1px dashed var(--colab-border-color);
 }
 
 .jp-showHiddenCellsButton:hover {
-  background-color: #555 !important;
+  background-color: var(--colab-highlighted-surface-color) !important;
 }
 
 /*-----------------------------------------------------------------------------
@@ -546,4 +561,5 @@ pre {
   font-size: var(--jp-code-font-size);
   line-height: var(--jp-code-line-height);
 }
+
 
