@@ -370,13 +370,25 @@ all of MD as it is not optimized for dense, information rich UIs.
   border: 0;
 }
 
+
+/* don't stretch tabs */
+.lm-TabBar-tab,.lm-TabBar-tab {
+  flex: none !important;
+}
+/* add margin before close X button */
+.lm-DockPanel-tabBar svg, .lm-TabPanel-tabBar svg {
+  margin-left: 8px ;
+}
+
+/* remove icons from tabs */
 .lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
   display: none;
 }
-
+/* don't display top blue bar */
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
   background: none;
 }
+/* add blue underline to the active tab */
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current {
   transition: border 1s;
   border-bottom: 2px solid #1a73e8;
@@ -388,8 +400,8 @@ all of MD as it is not optimized for dense, information rich UIs.
 .p-SplitPanel-handle:after,
 .lm-SplitPanel-handle:after {
   background: var(--colab-primary-surface-color);
-  min-height: 4px !important;
-  min-width: 4px !important;
+  min-height: 5px !important;
+  min-width: 5px !important;
   border-bottom: 1px solid var(--colab-border-color);
   border-right: 1px solid var(--colab-border-color);
 }
@@ -398,6 +410,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 .lm-DockPanel-handle:hover:after,
 .p-SplitPanel-handle:hover:after,
 .lm-SplitPanel-handle:hover:after {
+  transition: background 0.5s;
   background: var(--colab-highlighted-surface-color);
 }
 
@@ -533,3 +546,4 @@ pre {
   font-size: var(--jp-code-font-size);
   line-height: var(--jp-code-line-height);
 }
+
