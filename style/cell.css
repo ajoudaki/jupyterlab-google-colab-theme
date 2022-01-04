@@ -1,0 +1,82 @@
+
+/*----------------------------------------------------------------------------
+
+Style cells and code editor
+----------------------------------------------------------------------------*/
+
+
+.CodeMirror-matchingbracket {
+    border: 1px solid #999;
+    color: var(--colab-primary-text-color) !important;
+}
+
+
+.CodeMirror.cm-s-jupyter {
+    margin: var(--jp-code-margin);
+    background: var(--code-cell-background);
+    color: var(--jp-content-font-color1);
+}
+
+.jp-OutputArea-output pre {
+    padding: 10px;
+    white-space: pre;
+}
+
+.jp-Cell {
+    margin: var(--jp-cell-margin);
+}
+
+
+.jp-Cell-outputWrapper {
+    margin: 0 !important;
+}
+
+.jp-Cell.jp-Cell.jp-mod-active {
+    box-shadow: var( --jp-cell-editor-box-shadow);
+}
+.jp-Cell .jp-InputPrompt {
+    background: var(--code-cell-background);
+}
+
+
+.jp-Cell.jp-mod-active .jp-InputPrompt {
+    transition: background 0.2s;
+    background: var(--colab-highlighted-surface-color);
+}
+
+.jp-CodeConsole {
+    border-left: 1px solid var(--colab-border-color);
+}
+
+.jp-CodeConsole-content .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
+    display: none;
+}
+.jp-CodeConsole-content .jp-InputArea-editor.jp-InputArea-editor {
+    background: var(--jp-cell-editor-background);
+}
+
+/* hide collapser */
+.jp-Collapser {
+    display: none !important;
+}
+
+
+/* style line numbers */
+.cm-s-jupyter .CodeMirror-linenumber,.cm-s-jupyter .CodeMirror-gutter {
+    background: none var(--code-cell-background);
+}
+
+.jp-RenderedMarkdown {
+    font-family: var(--colab-chrome-font-family);
+}
+
+.jp-showHiddenCellsButton {
+    background-color: var(--colab-secondary-surface-color) !important;
+    width: 100%;
+    text-align: left !important;
+    border: 1px dashed var(--colab-border-color);
+}
+
+.jp-showHiddenCellsButton:hover {
+    background-color: var(--colab-highlighted-surface-color) !important;
+}

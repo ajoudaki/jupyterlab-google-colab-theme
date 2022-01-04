@@ -1,0 +1,48 @@
+
+/*----------------------------------------------------------------------------
+
+Style borderss: remove most borders borders and
+----------------------------------------------------------------------------*/
+.jp-SideBar .p-Widget, .lm-Widget {
+    border: none;
+}
+
+
+.lm-DockPanel-tabBar .lm-TabBar-tab {
+    border: 0;
+}
+
+/* don't stretch tabs */
+.lm-TabBar-tab,.lm-TabBar-tab {
+    flex: none !important;
+    max-width: 200px
+}
+/* don't display top blue bar */
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+    background: none;
+}
+/* add blue underline to the active tab */
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current {
+    transition: border 1s;
+    border-bottom: 2px solid #1a73e8;
+}
+
+
+.p-DockPanel-handle:after,
+.lm-DockPanel-handle:after,
+.p-SplitPanel-handle:after,
+.lm-SplitPanel-handle:after {
+    background: var(--colab-primary-surface-color);
+    min-height: 5px !important;
+    min-width: 5px !important;
+    border-bottom: 1px solid var(--colab-border-color);
+    border-right: 1px solid var(--colab-border-color);
+}
+
+.p-DockPanel-handle:hover:after,
+.lm-DockPanel-handle:hover:after,
+.p-SplitPanel-handle:hover:after,
+.lm-SplitPanel-handle:hover:after {
+    transition: background 0.5s;
+    background: var(--colab-highlighted-surface-color);
+}

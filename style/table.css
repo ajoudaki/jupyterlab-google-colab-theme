@@ -1,0 +1,37 @@
+/*----------------------------------------------------------------------------
+
+Style table dataframe
+----------------------------------------------------------------------------*/
+
+
+table.dataframe tr, table.dataframe th, table.dataframe td {
+    border: none;
+    padding: 0.5em;
+    white-space: normal;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table.dataframe {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    table-layout: fixed;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+table.dataframe tbody tr:nth-child(odd) {
+    background: var(--colab-secondary-surface-color);
+}
+table.dataframe tbody tr:nth-child(odd):hover {
+    background: var(--colab-highlighted-surface-color);
+}

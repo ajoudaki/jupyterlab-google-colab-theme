@@ -1,0 +1,37 @@
+/*----------------------------------------------------------------------------
+
+Style icons: make most icons white, except for active logos
+----------------------------------------------------------------------------*/
+
+/* make most icons white and fix their size */
+.jp-icon3[fill],
+.jp-icon-warn0[fill],
+.jp-icon-warn1[fill],
+.jp-icon-brand0[fill],
+.jp-icon-contrast0[fill] {
+    fill: var(--colab-icon-color);
+}
+.f1dvozo svg {
+    width: 18px;
+    padding: 0 0 0 3px;
+}
+
+/* designate the active side menu */
+.jp-SideBar li[aria-selected=true] .jp-icon3[fill] {
+    fill: var(--colab-logo-dark);
+}
+li[aria-selected=true] > div.f1dvozo {
+    border-left: 3px solid var(--colab-logo-dark);
+}
+
+
+/* add margin before close X button */
+.lm-DockPanel-tabBar svg, .lm-TabPanel-tabBar svg {
+    margin-left: 8px ;
+}
+
+/* remove icons from tabs */
+.lm-DockPanel-tabBar .lm-TabBar-tab > div:first-child > svg {
+    display: none;
+}
+

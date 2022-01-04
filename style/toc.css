@@ -1,0 +1,31 @@
+/*----------------------------------------------------------------------------
+
+Style table of contents
+----------------------------------------------------------------------------*/
+
+.jp-TableOfContents .jp-stack-panel-header {
+    flex: 1 1;
+    font-family: var(--colab-google-sans-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 8px 4px 8px;
+}
+
+
+#table-of-contents .jp-TableOfContents, #table-of-contents .jp-TableOfContents-content {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    overflow:  auto;
+    display: block;
+
+}
+
+
+.jp-tocItem {
+    border-left: 3px solid transparent;
+    color: var(--colab-secondary-text-color);
+    padding: 0 6px 0 10px;
+    font-family: var(--colab-chrome-font-family);
+    font-size: var(--colab-chrome-font-size);
+}
