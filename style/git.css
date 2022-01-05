@@ -1,3 +1,28 @@
+.jp-git-diff-root .CodeMirror-merge-scrolllock-wrap {
+    position: absolute;
+    top: 0;
+}
+
+.jp-git-PlainText-diff .CodeMirror-merge-scrolllock.CodeMirror-merge-scrolllock-enabled:after {
+    content: '\21db\21da';
+}
+
+.jp-git-diff-root .CodeMirror-merge-2pane .CodeMirror-merge-gap {
+    width: 2%;
+}
+
+.jp-git-diff-root .CodeMirror-merge-2pane .CodeMirror-merge-pane {
+    width: 49%;
+}
+
+.jp-git-diff-root .CodeMirror-merge-spacer {
+    background-image: repeating-linear-gradient(
+            130deg, transparent,
+            #868686a8 2px,
+            var(--jp-border-color0) 1px,
+            var(--jp-border-color0) 6px );
+}
+
 
 .jp-git-diff-root .CodeMirror-merge-collapsed-widget:after {
     background: linear-gradient(40deg, var(--code-cell-background) 10px, #0000 0),
