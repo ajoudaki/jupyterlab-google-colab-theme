@@ -430,6 +430,8 @@ html {
   --jp-mirror-editor-link-color: #00c;
   --jp-mirror-editor-error-color: #f00;
   --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-operator-magic: #0000ff;
+
 
   /* Vega extension styles */
   --jp-vega-background: white;

@@ -80,3 +80,8 @@ Style cells and code editor
 .jp-showHiddenCellsButton:hover {
     background-color: var(--colab-highlighted-surface-color) !important;
 }
+
+span.cm-operator:first-child,span.cm-operator:first-child ~ span.cm-variable {
+    color: var(--jp-mirror-editor-operator-magic) !important;
+}
+
