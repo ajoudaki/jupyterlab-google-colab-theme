@@ -347,10 +347,10 @@ all of MD as it is not optimized for dense, information rich UIs.
     --jp-mirror-editor-builtin-color: #dcdcaa;
     --jp-mirror-editor-bracket-color: #997;
     --jp-mirror-editor-tag-color: #170;
-    --jp-mirror-editor-attribute-color: #00c;
-    --jp-mirror-editor-header-color: blue;
+    --jp-mirror-editor-attribute-color: #7a7ace;
+    --jp-mirror-editor-header-color: #7a7ace;
     --jp-mirror-editor-quote-color: #090;
-    --jp-mirror-editor-link-color: #00c;
+    --jp-mirror-editor-link-color: #7a7ace;
     --jp-mirror-editor-error-color: #f00;
     --jp-mirror-editor-hr-color: #999;
     --jp-mirror-editor-operator-magic: #82c6ff;
