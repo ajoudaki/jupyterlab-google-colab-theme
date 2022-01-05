@@ -1,8 +1,24 @@
 
-.jp-git-diff-root .CodeMirror-merge-spacer {
-    background-image: repeating-linear-gradient(
-            130deg, transparent,
-            #868686a8 2px,
-            var(--jp-border-color0) 1px,
-            var(--jp-border-color0) 6px );
+.jp-git-diff-root .CodeMirror-merge-collapsed-widget:after {
+    background: linear-gradient(40deg, var(--code-cell-background) 10px, #0000 0),
+    linear-gradient(-40deg, var(--code-cell-background) 10px, #0000 0);
+    background-repeat: repeat-x;
+    background-size: 16px 24px;
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    height: 100px;
+    z-index:-2;
+    content: "";
+}
+.jp-git-diff-root .CodeMirror-merge-collapsed-widget:before {
+    content: "";
+    background: linear-gradient(-40deg, #111 15px, #0000 0), linear-gradient(+40deg, #111 15px, #0000 0);
+    background-repeat: repeat-x;
+    background-size: 16px 24px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    z-index: -3;
 }
