@@ -1,0 +1,8 @@
+
+.jp-git-diff-root .CodeMirror-merge-spacer {
+    background-image: repeating-linear-gradient(
+            130deg, transparent,
+            #868686a8 2px,
+            var(--jp-border-color0) 1px,
+            var(--jp-border-color0) 6px );
+}
