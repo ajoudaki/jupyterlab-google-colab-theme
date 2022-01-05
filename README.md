@@ -1,4 +1,4 @@
-# colab_theme
+# Google Colab theme for Jupyter Lab 
 
 Google Colab inspired theme for Jupyter Lab
 
