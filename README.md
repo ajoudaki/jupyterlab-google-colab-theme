@@ -1,4 +1,4 @@
-# colab_theme
+# Google Colab theme for Jupyter Lab 
 
 Google Colab inspired theme for Jupyter Lab
 
@@ -13,7 +13,7 @@ Google Colab inspired theme for Jupyter Lab
 ## Install
 
 ```bash
-pip install colab_theme
+pip install git+https://github.com/ajoudaki/jupyterlab-colab-theme
 ```
 
 ## Contributing
