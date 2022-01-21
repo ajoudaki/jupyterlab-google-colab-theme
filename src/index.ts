@@ -15,12 +15,17 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
     console.log('MY JupyterLab extension colab_theme is activated!!!');
     // addDivs();
-    const style = 'colab_theme/index.css';
 
     manager.register({
-      name: 'colab_theme',
-      isLight: true,
-      load: () => manager.loadCSS(style),
+      name: 'Colab dark theme',
+      isLight: false,
+      load: () => manager.loadCSS('colab_theme/index.css'),
+      unload: () => Promise.resolve(undefined)
+    });
+    manager.register({
+      name: 'Colab dark theme',
+      isLight: false,
+      load: () => manager.loadCSS('colab_theme/index_dark.css'),
       unload: () => Promise.resolve(undefined)
     });
   }

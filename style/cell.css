@@ -4,6 +4,9 @@
 Style cells and code editor
 ----------------------------------------------------------------------------*/
 
+.cm-s-jupyter span.cm-keyword {
+    font-weight: normal;
+}
 
 .CodeMirror-matchingbracket {
     border: 1px solid #999;
