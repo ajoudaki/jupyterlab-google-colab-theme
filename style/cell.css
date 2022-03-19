@@ -4,6 +4,10 @@
 Style cells and code editor
 ----------------------------------------------------------------------------*/
 
+.jp-RenderedHTMLCommon :not(pre) > code {
+    background-color: var(--code-cell-background);
+}
+
 .cm-s-jupyter span.cm-keyword {
     font-weight: normal;
 }
